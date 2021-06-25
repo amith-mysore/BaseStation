@@ -26,7 +26,7 @@ Part of DCC++ BASE STATION for the Arduino
   #define ARDUINO_AVR_MEGA2560
 #endif
 
-#if defined  ARDUINO_AVR_UNO
+#if defined(ARDUINO_AVR_UNO) || defined(ARDUINO_AVR_NANO) 
 
   #define ARDUINO_TYPE    "UNO"
 
@@ -60,14 +60,14 @@ Part of DCC++ BASE STATION for the Arduino
 
   #define MOTOR_SHIELD_NAME "ARDUINO MOTOR SHIELD"
 
-  #define SIGNAL_ENABLE_PIN_MAIN 13
-  #define SIGNAL_ENABLE_PIN_PROG 11
+  #define SIGNAL_ENABLE_PIN_MAIN A2
+  #define SIGNAL_ENABLE_PIN_PROG 12
 
   #define CURRENT_MONITOR_PIN_MAIN A0
   #define CURRENT_MONITOR_PIN_PROG A1
 
   #define DIRECTION_MOTOR_CHANNEL_PIN_A 12
-  #define DIRECTION_MOTOR_CHANNEL_PIN_B 13
+  #define DIRECTION_MOTOR_CHANNEL_PIN_B 7
 
 #elif MOTOR_SHIELD_TYPE == 1
 
@@ -131,5 +131,3 @@ Part of DCC++ BASE STATION for the Arduino
 /////////////////////////////////////////////////////////////////////////////////////
 
 #endif
-
-
